@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  border: 2px solid #ccc; /* Border styling */
+  padding: 20px; /* Padding around the content */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Background color */
+  width: 400px;
+  margin: 0 auto;
+}
