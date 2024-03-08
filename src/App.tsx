@@ -1,6 +1,6 @@
-import './App.css';
-import teamsData from './CollegeBasketballTeams.json';
-import React, { ReactNode } from 'react';
+import './App.css'; // Import CSS file for styling
+import teamsData from './CollegeBasketballTeams.json'; // Import JSON data
+import React, { ReactNode } from 'react'; // Import React and ReactNode types
 
 interface Team {
   school: string;
@@ -9,11 +9,14 @@ interface Team {
   state: string;
 }
 
+// TeamCard component to display information for each team
 function TeamCard({ team }: { team: Team }) {
   const { school, name, city, state } = team;
 
   return (
     <div className="card">
+      {' '}
+      {/* Apply card class for styling */}
       <h2>{school}</h2>
       <p>{name}</p>
       <p>
@@ -23,6 +26,7 @@ function TeamCard({ team }: { team: Team }) {
   );
 }
 
+// WelcomeHeader component to display welcome message
 function WelcomeHeader() {
   return (
     <div>
@@ -35,6 +39,7 @@ function WelcomeHeader() {
   );
 }
 
+// CollegeList component to display a list of teams using TeamCard component
 function CollegeList({ teams }: { teams: Team[] }) {
   return (
     <div>
@@ -45,13 +50,17 @@ function CollegeList({ teams }: { teams: Team[] }) {
   );
 }
 
+// App component as the main entry point of the application
 function App() {
   return (
     <div className="App">
-      <WelcomeHeader />
-      <CollegeList teams={teamsData.teams} />
+      {' '}
+      {/* Apply App class for styling */}
+      <WelcomeHeader /> {/* Render WelcomeHeader component */}
+      <CollegeList teams={teamsData.teams} />{' '}
+      {/* Render CollegeList component with teams data */}
     </div>
   );
 }
 
-export default App;
+export default App; // Export App component as the default export
